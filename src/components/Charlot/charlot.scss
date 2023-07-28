@@ -1,0 +1,106 @@
+@import '../../colors';
+
+.do_wykresu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 2fr 1fr;
+    transition: all 1s ease-out;
+    z-index: 0;
+
+
+    p {
+        justify-self: center;
+        align-self: center;
+        z-index: 0;
+        transition: all 1s ease-out;
+    }
+
+    .subheadline {
+        margin: 0;
+        padding: 0;
+        height: 3vw;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        font-weight: 900;
+        z-index: 0;
+
+        &.second {
+            padding: 20px 0;
+        }
+
+        &.red {
+            padding: 40px;
+            text-align: center;
+            font-weight: normal;
+            text-transform: none;
+
+            p {
+                font-size: 1.5vw;
+                margin-bottom: 0;
+            }
+
+            span {
+                margin: 0;
+                padding: 0;
+                font-weight: 900;
+                font-size: 2vw;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 2vw;
+        z-index: 0;
+    }
+
+    .container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        transition: all 1s ease-out;
+        justify-self: flex-end;
+        align-self: flex-end;
+        z-index: 0;
+
+        &.podpisy {
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+}
+
+.wykres_charlot {
+    position: absolute;
+    transform: scale(.82) translateX(0%);
+    transition: all .5s;
+    box-sizing: border-box;
+    top: 5%;
+    left: 0;
+    right: 0;
+    z-index: -5;
+
+
+    &.active1 {
+        position: absolute;
+        transform: scale(1.6) translateX(0%);
+        left: 50%;
+        top: 20%;
+        z-index: 99;
+    }
+
+    &.active2 {
+        position: absolute;
+        transform: scale(1.6) translateX(-30%);
+        right: 0%;
+        top: 20%;
+        z-index: 99;
+    }
+}

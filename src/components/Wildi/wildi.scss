@@ -1,0 +1,446 @@
+@import '../../colors';
+
+.main_container {
+    &.wildi {
+
+
+
+        .wildi {
+            position: relative;
+            transform: translateX(0%);
+
+
+
+            p {
+                color: white;
+                text-align: center;
+                line-height: 1.8vw;
+            }
+
+            .subhead {
+                position: absolute;
+                color: white;
+                text-align: center;
+                line-height: 1.8vw;
+                opacity: 1;
+                transition: ease-in-out .5s;
+
+                &.action {
+                    opacity: 0;
+                }
+
+                span {
+                    &.red {
+                        color: $red;
+                    }
+
+                    &.bold {
+                        font-weight: 800;
+                    }
+
+                    &.blue {
+                        color: $blekit;
+                    }
+                }
+
+                ul {
+                    list-style-type: disc;
+
+                    li {
+                        margin: .5vw 0;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+
+            &.coordinates {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 85% 1fr;
+                z-index: 1;
+
+
+
+
+
+                .value {
+                    font-size: 1.2vw;
+                    font-weight: 900;
+                    position: absolute;
+                    top: 100%;
+                    margin-top: .5vw;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: showValue 3s ease-in-out;
+
+                    @keyframes showValue {
+                        0% {
+                            opacity: 0;
+                        }
+
+                        80% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+
+                    &.rosso {
+                        color: $red;
+                    }
+
+                    &.blu {
+                        color: $blekit;
+                    }
+                }
+
+                .slupki {
+                    position: absolute;
+                    width: 90%;
+                    height: 72%;
+                    top: 12.7%;
+                    left: 52%;
+                    transform: translateX(-50%);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    z-index: -1;
+
+
+                    $animation_time: 3s;
+
+                    .one_wildi {
+                        display: flex;
+                        align-items: flex-start;
+
+                        .red {
+                            transform-origin: top;
+                            position: relative;
+                            width: 20%;
+                            height: 40%;
+                            background-color: $red;
+                            top: 0;
+                            animation: red_wildi_one $animation_time ease-in-out;
+
+                            @keyframes red_wildi_one {
+                                0% {
+                                    height: 0%;
+                                }
+
+                                100% {
+                                    height: 40%;
+                                }
+
+                            }
+                        }
+
+                        .blue {
+                            transform-origin: top;
+                            position: relative;
+                            width: 20%;
+                            height: 67%;
+                            background-color: $blekit;
+                            top: 0;
+                            animation: blue_wildi_one $animation_time ease-in-out;
+
+                            @keyframes blue_wildi_one {
+                                0% {
+                                    height: 0%;
+                                }
+
+                                100% {
+                                    height: 67%;
+                                }
+                            }
+                        }
+                    }
+
+                    .two_wildi {
+
+                        display: flex;
+                        align-items: flex-start;
+
+                        .red {
+                            transform-origin: top;
+                            position: relative;
+                            width: 20%;
+                            height: 53%;
+                            background-color: $red;
+                            top: 0;
+                            animation: red_wildi_two $animation_time ease-in-out;
+
+                            @keyframes red_wildi_two {
+                                0% {
+                                    height: 0%;
+                                }
+
+                                100% {
+                                    height: 53%;
+                                }
+                            }
+                        }
+
+                        .blue {
+                            transform-origin: top;
+                            position: relative;
+                            width: 20%;
+                            height: 94%;
+                            background-color: $blekit;
+                            top: 0;
+                            animation: blue_wildi_two $animation_time ease-in-out;
+
+                            @keyframes blue_wildi_two {
+                                0% {
+                                    height: 0%;
+                                }
+
+                                100% {
+                                    height: 94%;
+                                }
+
+
+                            }
+                        }
+                    }
+
+                    &.page_two {
+                        padding: 0;
+                        width: 100%;
+                        transform: translateX(-25%);
+                        left: 50%;
+                        top: 50%;
+                        right: 0;
+                        bottom: 0;
+
+                        .one_wildi {
+
+                            display: flex;
+                            align-items: flex-start;
+
+                            .red {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 27%;
+                                background-color: $red;
+                                top: 0;
+                                animation: red_wildi_three 15s ease-in-out;
+
+                                @keyframes red_wildi_three {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 27%;
+                                    }
+
+                                    100% {
+                                        height: 27%;
+                                    }
+
+                                }
+                            }
+
+                            .blue {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 40%;
+                                transform: rotate(180deg);
+                                background-color: $blekit;
+                                top: 0;
+                                animation: blue_wildi_four 15s ease-in-out;
+
+                                @keyframes blue_wildi_four {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 40%;
+                                    }
+
+                                }
+
+                                .value {
+                                    transform: translateX(-50%) rotate(180deg);
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .container {
+            &.red {
+                height: 50%;
+                bottom: 0;
+                position: absolute;
+                background-color: $red;
+                padding: 2vw;
+                color: white;
+                font-weight: 600;
+                font-size: 1.8vw;
+                transform: translateX(0);
+                transition: all 1s ease-in-out;
+
+                &.action {
+                    transform: translateX(100%);
+                }
+            }
+
+            &.grid {
+                top: 0;
+                position: absolute;
+                transform: translateX(0%);
+                transition: all 1s ease-in-out;
+
+                &.action {
+                    transform: translateX(100%);
+                }
+
+                &.sixty {
+                    position: relative;
+                    height: 100%;
+                    display: grid;
+                    grid-template-rows: 1fr;
+                    grid-template-columns: 60% 1fr;
+                }
+
+                &.landscape {
+
+                    position: relative;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+
+                    img {
+                        position: absolute;
+                        top: 2%;
+                        right: 5%;
+                        align-self: center;
+                        justify-self: center;
+                        max-width: 40%;
+                    }
+
+
+
+                    .column {
+                        height: 50%;
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        padding: 2vw;
+
+                        p {
+
+                            text-align: left;
+                            font-size: 1.3vw;
+                            color: white;
+
+
+                            .fas {
+                                margin-right: 1vw;
+
+                                &.red {
+                                    color: $red;
+                                    margin-bottom: 1vw;
+                                }
+
+                                &.blue {
+                                    color: $blekit;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+            }
+
+        }
+
+
+
+        .frame {
+            &.wildi {
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                display: grid;
+                grid-template-columns: 7% 1fr;
+                transition: all 1s ease-in-out;
+
+
+                &.action {
+                    transform: translateX(-120%);
+                }
+
+                .vertical {
+                    position: absolute;
+                    align-self: center;
+                    justify-self: center;
+                    transform: rotate(-90deg);
+                    font-size: 1vw;
+                }
+
+                .grid {
+                    position: relative;
+                    width: 90%;
+                    margin-left: 7%;
+
+                    .opis_wildi {
+                        font-size: 0.8vw;
+                    }
+                }
+
+            }
+
+            .container_coordinates {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 5% 1fr;
+
+
+                &.eight {
+                    grid-template-rows: repeat(8, 1fr);
+                }
+
+                &.seven {
+                    grid-template-rows: repeat(7, 1fr);
+                }
+
+                .line,
+                .number {
+                    align-self: center;
+                    justify-self: center;
+                }
+
+                .line {
+                    opacity: .3;
+                    display: block;
+                    background-color: white;
+                    height: .5px;
+                    width: 95%;
+
+                    &.bold {
+                        height: 1px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+}

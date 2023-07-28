@@ -1,0 +1,104 @@
+@import '../../colors';
+
+.reco {
+
+    padding: 2vw;
+
+    img {
+        max-width: 20%;
+    }
+
+    h2 {
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        font-size: 3.5vw;
+        color: white;
+        font-weight: 700;
+
+        span {
+            color: $blekit;
+        }
+    }
+
+}
+
+.gradient_reco {
+    background: rgb(22, 43, 184);
+    background: radial-gradient(circle, rgba(22, 43, 184, 1) 0%, rgba(1, 0, 66, 1) 100%);
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.single {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25vw;
+}
+
+.tabel_reco_container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 2vw;
+    background-color: rgba($blekit, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw 2vw;
+
+    .tabel_reco {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 0.2vw;
+
+        .field_reco {
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5vw;
+
+            text-align: center;
+
+            &.blue {
+                background-color: $blue;
+            }
+
+            &.blekit {
+
+                background-color: rgba($dodger, 1);
+            }
+
+            &.blekit_half {
+
+                background-color: rgba($dodger, .5);
+            }
+
+            &.bold {
+                text-align: center;
+                // justify-content: flex-start;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            &.black {
+                color: black;
+            }
+
+            &.red {
+                color: rgb(145, 0, 29)
+            }
+
+            &.green {
+                color: rgb(170, 255, 0);
+            }
+        }
+    }
+}

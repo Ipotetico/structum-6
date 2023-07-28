@@ -1,0 +1,93 @@
+@import '../../colors';
+
+.main_container_title {
+    width: 100vw;
+    height: 100vh;
+    animation: show 1s linear;
+    
+
+    @keyframes show {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+}
+
+
+
+.tlo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.paczka {
+    z-index: 2;
+    position: absolute;
+    width: 70%;
+    top: 28%;
+    right: 0%;
+    cursor: pointer;
+    transition: all .5s;
+    transform-origin: center;
+
+    &.change {
+        width: 120%;
+    }
+
+    img {
+        transform-origin: center;
+    }
+}
+
+.overlay {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .5s;
+
+    &.change {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .7);
+    }
+}
+
+
+
+.buttons_container {
+    position: absolute;
+    top: 5%;
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    // padding-top: 2vw;
+
+
+
+
+    .buttons_subcontainer {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+    }
+
+    .logoPF {
+        align-self: center;
+        justify-self: center;
+        width: 65%;
+    }
+}
+

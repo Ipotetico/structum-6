@@ -1,0 +1,204 @@
+@import '../../colors';
+
+.padding {
+    box-sizing: border-box;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.fota {
+        padding: 5%;
+
+        img {
+            max-width: 70%;
+        }
+    }
+
+
+
+
+
+
+    .headline {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 25% 1fr 25%;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1vw;
+
+        .container_headline {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+
+            .fa-square {
+                margin-bottom: 0.7vw;
+                margin-right: 1vw;
+
+
+                &.red {
+                    color: $red;
+
+                }
+
+                &.blue {
+                    color: $blekit;
+                }
+
+            }
+
+            p {
+                font-size: 1vw;
+
+
+            }
+        }
+
+        p {
+            text-align: center;
+            color: white;
+        }
+    }
+}
+
+
+.uebelhart {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60% 1fr;
+}
+
+.two {
+    position: relative;
+    width: 100%;
+    color: white;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 10%;
+    padding: 2%;
+
+    hr,
+    p {
+        justify-self: center;
+        align-self: flex-end;
+    }
+
+    hr {
+        opacity: .5;
+        border: .3px solid;
+        color: white;
+        background-color: white;
+        height: 100%;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+            height: 60%;
+        }
+    }
+}
+
+.slupki_uebelhart {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+
+    .slupek {
+        position: absolute;
+        height: 4vw;
+        right: 9%;
+
+        &.blue {
+            bottom: 25%;
+            background-color: $blekit;
+            width: 81%;
+            animation: bar_blue 2s ease-in-out;
+
+            @keyframes bar_blue {
+                0% {
+                    width: 0;
+                }
+
+                100% {
+                    width: 81%;
+                }
+            }
+        }
+
+        &.red {
+            top: 20%;
+            background-color: $red;
+            width: 2%;
+            animation: bar_red 2s ease-in-out infinite;
+
+            @keyframes bar_red {
+                0% {
+                    width: 0;
+                }
+
+                50% {
+                    width: 2%;
+                }
+
+                100% {
+                    width: 0;
+                }
+            }
+        }
+    }
+}
+
+.opis_paska_uebelhart {
+    z-index: 1;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 27%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10%;
+
+
+    h3 {
+        text-transform: none;
+        font-size: 3vw;
+
+        &:nth-of-type(1) {
+            color: $blekit;
+        }
+
+        &:nth-of-type(2) {
+            color: $red;
+        }
+    }
+
+    p {
+        font-size: 1vw;
+
+        &:nth-of-type(1) {
+            color: $blekit;
+        }
+
+        &:nth-of-type(2) {
+            color: $red;
+        }
+    }
+
+
+
+}

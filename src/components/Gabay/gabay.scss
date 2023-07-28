@@ -1,0 +1,252 @@
+@import '../../colors';
+
+.main_container {
+    &.facts {
+
+
+
+        .container_grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 65% 1fr;
+            grid-template-rows: 1fr;
+
+            img {
+                align-self: center;
+                justify-self: center;
+                width: 70%;
+            }
+        }
+
+        .facts {
+            box-sizing: border-box;
+            padding: 0 2vw;
+            margin: 0;
+            height: 50%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+
+        .three_rows_container {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 1fr;
+        }
+
+        .three_rows {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 15% 1fr;
+            transition: all .5s;
+
+            img {
+                align-self: center;
+                justify-self: flex-end;
+                width: 65%;
+            }
+
+            h2 {
+                align-self: center;
+                justify-self: flex-start;
+                margin-left: 2vw;
+                color: white;
+                font-size: 2vw;
+            }
+        }
+
+
+
+        .container_tabel {
+            position: absolute;
+            box-sizing: border-box;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1vw;
+            transform: scale(1) translate(0%, 0%);
+            transition: all .5s;
+            left: 5%;
+            top: 55%;
+
+            &.active {
+                position: absolute;
+                left: 25%;
+                top: 60%;
+                transform: scale(1.5) translate(0%, 0%);
+            }
+
+            .container_in_tabel {
+                position: absolute;
+                width: calc(100 / 3 * 1%);
+                height: 20vw;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                transition: all .5s;
+                transform: translate(-0%, -0%) scale(1);
+                box-shadow: 0 0 10px rgba($color: black, $alpha: 0);
+
+                &:nth-of-type(1) {
+                    left: 0;
+                }
+
+                &:nth-of-type(2) {
+                    left: calc(100 / 3 * 1%);
+                }
+
+                &:nth-of-type(3) {
+                    left: calc(100 / 3 * 2%);
+                }
+
+                &.active {
+
+                    width: 20vw;
+                    height: 22vw;
+                    left: 50%;
+                    top: 20%;
+                    transform: translate(-0%, -50%) scale(2);
+                    z-index: 99;
+                    box-shadow: 0 0 30px rgba($color: black, $alpha: 1.0);
+                }
+
+
+                .container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+
+
+
+
+                    &.green {
+                        background-color: $green;
+                        color: white;
+                        font-size: 1vw;
+                        padding: 0 .5vw;
+
+                        h3 {
+                            text-transform: uppercase;
+                            text-align: center;
+                            color: white;
+                            font-size: 1.5vw;
+                            padding: 0;
+                        }
+
+                        p {
+                            font-size: 1vw;
+                            color: white;
+                            padding: 0;
+                        }
+
+                        &.outline {
+                            padding: .5vw;
+                            background: rgba($green, .3);
+                            border: 1px solid $green;
+
+                            p {
+                                font-size: 1vw;
+                                color: $green;
+                                padding: 0;
+                            }
+                        }
+                    }
+
+
+
+                    &.red {
+                        padding: .5vw;
+                        background-color: $red;
+
+                        h3 {
+                            text-transform: uppercase;
+                            text-align: center;
+                            color: white;
+                            font-size: 1.5vw;
+                            padding: 0;
+                        }
+
+                        p {
+                            font-size: 1vw;
+                            color: white;
+                            padding: 0;
+                        }
+
+                        &.outline {
+                            padding: .5vw;
+                            background: rgba($red, .3);
+                            border: 1px solid $red;
+
+                            p {
+                                font-size: 1vw;
+                                color: $red;
+                                padding: 0;
+                            }
+
+                            h3 {
+                                color: $red;
+                                text-transform: none;
+                                font-size: 2vw;
+                                font-weight: 800;
+                            }
+
+
+                        }
+                    }
+
+
+
+
+
+                    &.blue {
+                        background-color: $blekit;
+
+                        h3 {
+                            text-transform: uppercase;
+                            text-align: center;
+                            color: white;
+                            font-size: 1.5vw;
+                            padding: 0;
+                        }
+
+                        p {
+                            font-size: 1vw;
+                            color: white;
+                            padding: 0;
+                        }
+
+                        &.outline {
+                            background: rgba($blekit, .3);
+                            border: 1px solid $blekit;
+
+                            h3 {
+                                color: $blekit;
+                                text-transform: none;
+                                font-size: 2vw;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+
+
+                }
+
+                h4,
+                p {
+                    color: white;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1vw;
+                }
+
+            }
+        }
+    }
+}

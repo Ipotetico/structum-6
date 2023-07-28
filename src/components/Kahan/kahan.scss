@@ -1,0 +1,1006 @@
+@import '../../colors';
+@import '../../fonts';
+
+.main_container {
+    width: 100vw;
+    height: 100vh;
+    animation: show 1s linear;
+    padding: 1vw 0 3vw 0;
+
+    @keyframes show {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    .gradient {
+        background: rgb(22, 43, 184);
+        background: radial-gradient(circle, rgba(22, 43, 184, 1) 0%, rgba(1, 0, 66, 1) 100%);
+        display: grid;
+        grid-template-rows: 1.3fr 5fr 1fr;
+
+
+
+        &.five {
+            // grid-template-rows: 1fr 1px 1.5fr 1fr 5fr 1.5fr;
+            grid-template-rows: 1.5fr 1fr 5fr 1.5fr;
+        }
+
+        &.no_background {
+            grid-template-rows: 1fr 1px 1.5fr 1fr 5fr 1.5fr;
+            background: none;
+        }
+
+        &.gradient_two {
+            grid-template-rows: 1fr 1px 5fr 1.5fr 1fr;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+       
+
+            &.space__between {
+                justify-content: space-between;
+            }
+
+            &.legend {
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                color: white;
+                padding: .3vw 3vw;
+
+                p {
+                    font-size: 1.2vw;
+
+                    .fas {
+                        font-size: 1.3vw;
+                        margin-right: 1vw;
+
+
+                        &.blekit {
+                            color: $blekit;
+                        }
+
+                        &.grey {
+                            color: grey;
+                        }
+
+                        &.red {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+
+            &.grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+            }
+
+            &.column {
+                flex-direction: column;
+            }
+
+            &.menu {
+
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .nota {
+                    padding: 0 3vw;
+                    text-align: left;
+                    align-self: center;
+                    justify-self: center;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 200;
+
+                    sup {
+                        margin-left: -.6vw;
+                        font-size: 7px;
+                    }
+                }
+
+                &.three {
+                    grid-template-columns: 1fr 1fr 10%;
+
+                    .indicator {
+                        width: 6vw;
+                        height: 6vw;
+                        background-color: rgba($blekit, 0.3);
+                        border: 1px solid white;
+                        border-radius: 50%;
+                        align-self: center;
+                        justify-self: center;
+                        transform: rotate(0deg);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .5s;
+
+                        &.turned {
+                            transform: rotate(-180deg);
+                        }
+
+                        i {
+                            text-align: center;
+                            color: white;
+                            font-size: 2.5vw;
+                            animation: arrow 2s ease-in-out;
+
+                            @keyframes arrow {
+                                0% {
+                                    transform: scale(1);
+                                }
+
+                                50% {
+                                    transform: scale(1.5);
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &.padding {
+                box-sizing: border-box;
+                padding: 3vw;
+
+                &.legend {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 90% 1fr;
+                }
+            }
+
+            &.white {
+
+                background: rgb(1, 0, 66);
+                background: linear-gradient(90deg, rgba(1, 0, 66, 1) 0%, rgb(151, 165, 255) 50%, rgba(1, 0, 66, 1) 100%);
+
+
+                h2 {
+                    font-size: 2.5vw;
+                    font-weight: 300;
+                    color: white;
+                }
+            }
+
+
+
+            h1 {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 6vw;
+            }
+
+
+
+            h2 {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 3vw;
+                text-align: center;
+
+                span {
+                    font-size: 4vw;
+                    color: $red;
+                }
+
+                sup {
+                    vertical-align: super;
+                    font-size: 14px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .kahan {
+
+            .in_kahan {
+                position: absolute;
+                background-color: $red;
+                height: 10%;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                padding: 2vw;
+                bottom: 2vw;
+                color: white;
+                font-size: 1.8vw;
+                font-weight: 600;
+                line-height: 2.5vw;
+            }
+
+
+
+
+
+            .kahan {
+                position: relative;
+                transform: translateX(0%);
+
+
+
+                p {
+                    color: white;
+                    text-align: center;
+                    line-height: 1.8vw;
+                }
+
+
+
+                &.coordinates {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 85% 1fr;
+                    z-index: 1;
+
+
+
+
+
+                    .value {
+                        font-size: 1vw;
+                        position: absolute;
+                        top: 100%;
+                        margin-top: .5vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        &.rosso {
+                            color: $red;
+                        }
+
+                        &.blu {
+                            color: $blekit;
+                        }
+                    }
+
+                    .slupki {
+                        position: absolute;
+                        width: 90%;
+                        height: 72%;
+                        top: 12.7%;
+                        left: 52%;
+                        transform: translateX(-50%);
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr;
+                        z-index: -1;
+
+
+                        $animation_time: 9s;
+
+                        .one_kahan {
+                            display: flex;
+                            align-items: flex-start;
+
+                            .red {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 40%;
+                                background-color: $red;
+                                top: 0;
+                                animation: red_wildi_one $animation_time ease-in-out infinite;
+
+                                @keyframes red_wildi_one {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 40%;
+                                    }
+
+                                    80% {
+                                        height: 40%;
+                                    }
+
+                                    100% {
+                                        height: 0%;
+                                    }
+                                }
+                            }
+
+                            .blue {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 67%;
+                                background-color: $blekit;
+                                top: 0;
+                                animation: blue_wildi_one $animation_time ease-in-out infinite;
+
+                                @keyframes blue_wildi_one {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 67%;
+                                    }
+
+                                    80% {
+                                        height: 67%;
+                                    }
+
+                                    100% {
+                                        height: 0%;
+                                    }
+                                }
+                            }
+                        }
+
+                        .two_kahan {
+
+                            display: flex;
+                            align-items: flex-start;
+
+                            .red {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 53%;
+                                background-color: $red;
+                                top: 0;
+                                animation: red_wildi_two $animation_time ease-in-out infinite;
+
+                                @keyframes red_wildi_two {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 53%;
+                                    }
+
+                                    80% {
+                                        height: 53%;
+                                    }
+
+                                    100% {
+                                        height: 0%;
+                                    }
+                                }
+                            }
+
+                            .blue {
+                                transform-origin: top;
+                                position: relative;
+                                width: 20%;
+                                height: 94%;
+                                background-color: $blekit;
+                                top: 0;
+                                animation: blue_wildi_two $animation_time ease-in-out infinite;
+
+                                @keyframes blue_wildi_two {
+                                    0% {
+                                        height: 0%;
+                                    }
+
+                                    20% {
+                                        height: 94%;
+                                    }
+
+                                    80% {
+                                        height: 94%;
+                                    }
+
+                                    100% {
+                                        height: 0%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.page_two {
+                            padding: 0;
+                            width: 100%;
+                            transform: translateX(-25%);
+                            left: 50%;
+                            top: 50%;
+                            right: 0;
+                            bottom: 0;
+
+                            .one_kahan {
+
+                                display: flex;
+                                align-items: flex-start;
+
+                                .red {
+                                    transform-origin: top;
+                                    position: relative;
+                                    width: 20%;
+                                    height: 27%;
+                                    background-color: $red;
+                                    top: 0;
+                                    animation: red_wildi_three 15s ease-in-out infinite;
+
+                                    @keyframes red_wildi_three {
+                                        0% {
+                                            height: 0%;
+                                        }
+
+                                        10% {
+                                            height: 27%;
+                                        }
+
+                                        90% {
+                                            height: 27%;
+                                        }
+
+                                        100% {
+                                            height: 0%;
+                                        }
+                                    }
+                                }
+
+                                .blue {
+                                    transform-origin: top;
+                                    position: relative;
+                                    width: 20%;
+                                    height: 40%;
+                                    transform: rotate(180deg);
+                                    background-color: $blekit;
+                                    top: 0;
+                                    animation: blue_wildi_four 15s ease-in-out infinite;
+
+                                    @keyframes blue_wildi_four {
+                                        0% {
+                                            height: 0%;
+                                        }
+
+                                        20% {
+                                            height: 0%;
+                                        }
+
+                                        30% {
+                                            height: 40%;
+                                        }
+
+                                        90% {
+                                            height: 40%;
+                                        }
+
+                                        100% {
+                                            height: 0%;
+                                        }
+                                    }
+
+                                    .value {
+
+                                        transform: translateX(-50%) rotate(180deg);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .container {
+                &.red {
+                    height: 50%;
+                    bottom: 0;
+                    position: absolute;
+                    background-color: $red;
+                    padding: 2vw;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.8vw;
+                    transform: translateX(0);
+                    transition: all 1s ease-in-out;
+
+                    &.action {
+                        transform: translateX(100%);
+                    }
+                }
+
+                &.grid {
+                    top: 0;
+                    position: absolute;
+                    transform: translateX(0%);
+                    transition: all 1s ease-in-out;
+
+                    &.action {
+                        transform: translateX(100%);
+                    }
+
+                    &.sixty {
+                        position: relative;
+                        height: 100%;
+                        display: grid;
+                        grid-template-rows: 1fr;
+                        grid-template-columns: 60% 1fr;
+                    }
+
+                    &.landscape {
+                        position: relative;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr;
+
+                        img {
+                            position: absolute;
+                            top: 2%;
+                            right: 5%;
+                            align-self: center;
+                            justify-self: center;
+                            max-width: 30%;
+                        }
+
+
+
+                        .column {
+                            height: 50%;
+                            position: absolute;
+                            top: 0;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            padding: 2vw;
+
+                            p {
+
+                                text-align: left;
+                                font-size: 1.3vw;
+                                color: white;
+
+
+                                .fas {
+                                    margin-right: 1vw;
+
+                                    &.red {
+                                        color: $red;
+                                        margin-bottom: 1vw;
+                                    }
+
+                                    &.blue {
+                                        color: $blekit;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                }
+
+            }
+
+
+
+            .frame {
+                color: white;
+                &.kahan {
+                    width: 90%;
+                    height: 90%;
+                    position: absolute;
+                    display: grid;
+                    grid-template-columns: 7% 1fr;
+                    transition: all 1s ease-in-out;
+
+
+                    &.action {
+                        transform: translateX(-120%);
+                    }
+
+                    .grid {
+                        position: relative;
+                        width: 90%;
+                        margin-left: 7%;
+
+                        .opis_kahan {
+                            font-size: 0.8vw;
+                        }
+                    }
+
+                }
+
+                .container_coordinates {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: grid;
+                    grid-template-columns: 5% 1fr;
+
+                    &.nine {
+                        grid-template-rows: repeat(9, 1fr);
+                    }
+
+
+                    &.eight {
+                        grid-template-rows: repeat(8, 1fr);
+                    }
+
+                    &.seven {
+                        grid-template-rows: repeat(7, 1fr);
+                    }
+
+                    .line,
+                    .number {
+                        align-self: center;
+                        justify-self: center;
+                    }
+
+                    .line {
+                        opacity: .3;
+                        display: block;
+                        background-color: white;
+                        height: .5px;
+                        width: 95%;
+
+                        &.bold {
+                            height: 1px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .subheadline {
+        width: 100%;
+        padding: 15px 50px;
+        color: $granat;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4vw;
+
+
+        &.second {
+            color: white;
+            background-color: $blekit;
+            margin-bottom: .3vw;
+        }
+
+        &.red {
+            background-color: $red;
+            color: white;
+            padding: 30px 30px;
+
+
+            p {
+                font-size: 2vw;
+            }
+        }
+
+        h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 2.7vw;
+        }
+
+        h4 {
+            font-size: 2vw;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .frame {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        border-radius: 15px;
+
+
+    }
+
+    .wykres {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+
+            span {
+                font-size: 18px;
+
+                &.blue {
+                    color: $blekit;
+                }
+
+                &.red {
+                    color: $red;
+                }
+            }
+
+
+        }
+
+        &.one {
+            color: white;
+            grid-template-columns: 1fr 90%;
+            grid-template-rows: 1fr;
+        }
+
+
+
+        &.ten {
+            z-index: 1;
+            padding: 0 0 10px 0;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: 1fr 90%;
+
+            p {
+                font-size: 12px;
+                align-self: center;
+                justify-self: center;
+            }
+
+            hr {
+                opacity: .5;
+                border: .3px solid;
+                writing-mode: vertical-rl;
+                color: white;
+                background-color: white;
+            }
+        }
+
+        .vertical {
+            text-align: center;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    .slupki {
+        bottom: 16%;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 81%;
+        display: flex;
+        align-items: flex-end;
+
+        .slupek {
+            transform-origin: bottom;
+            position: absolute;
+            width: 7vw;
+            animation: slupek 7s ease-in-out;
+
+            img {
+                position: absolute;
+                height: 4vw;
+                top: 0%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            @keyframes slupek {
+                0% {
+                    transform: scaleY(0);
+                }
+
+                20% {
+                    transform: scaleY(1);
+                }
+
+
+            }
+
+            &.blue {
+                right: 8%;
+                height: 10vw;
+                background-color: $blekit;
+            }
+
+            &.red {
+                left: 44%;
+                height: 21vw;
+                background-color: $red;
+            }
+
+            .opis {
+                position: absolute;
+            }
+        }
+    }
+
+    .opis {
+        width: 15vw;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        &.one {
+            top: 20%;
+
+            left: 35%;
+        }
+
+        &.zwei {
+            top: 58%;
+            left: 67%;
+        }
+
+        strong {
+            font-weight: 900;
+        }
+
+        i {
+            margin: 0 1vw;
+        }
+
+        span {
+            font-size: 1vw;
+
+            &.blue {
+                color: $blekit;
+
+            }
+
+            &.red {
+                color: $red;
+            }
+        }
+
+
+
+
+    }
+
+    sup {
+        font-weight: normal;
+        font-size: .8vw;
+        vertical-align: super;
+        padding-bottom: 3vw;
+    }
+}
+
+.tlo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 50%;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.paczka {
+    z-index: 2;
+    position: absolute;
+    width: 70%;
+    top: 28%;
+    right: 0%;
+    cursor: pointer;
+    transition: all .5s;
+    transform-origin: center;
+
+    &.change {
+        width: 120%;
+    }
+
+    img {
+        transform-origin: center;
+    }
+}
+
+.overlay {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .5s;
+
+    &.change {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .7);
+    }
+}
+
+
+
+.buttons_container {
+    position: absolute;
+    bottom: 7%;
+    right: 3%;
+    transform: translateX(-0%);
+    width: 65%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+
+
+
+
+
+
+#chart {
+    width: 100%;
+    height: 100%;
+    margin: 35px auto;
+    color: white;
+    fill: white;
+
+    * {
+        color: white;
+    }
+}
+
+.subtitle_kahan {
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    font-weight: 200;
+}
+
+.przypis_kahan {
+    font-size: 0.7vw;
+}
+
+.vertical {
+    color: white;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    transform: rotate(-90deg);
+    font-size: 1vw;
+}
+
+.wykres_kahan {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 2vw;
+    padding:0.5vw 2vw;
+
+    &.dwa {
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+}
