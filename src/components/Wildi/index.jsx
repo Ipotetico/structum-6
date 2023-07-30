@@ -25,12 +25,12 @@ const Wildi = ({ setPage }) => {
         </div>
         <div className='container wildi'>
           <p className={action ? 'subhead' : 'subhead action'}>
-            Badanie pilotazowe, podwójnie zaślepione, kontrolowane placebo, pod
+            Badanie pilotażowe, podwójnie zaślepione, kontrolowane placebo, pod
             kontrolą MRI. <br />{' '}
             <span className='red'>Siarczan chondroityny, </span>
             800 mg/dobę vs. placebo. <br /> Badanie trwało{' '}
             <span className='blue'>
-              6 miesięcy, przedłuzone o kolejne 6 miesięcy metodą otwartej
+              6 miesięcy, przedłużone o kolejne 6 miesięcy metodą otwartej
               próby.
             </span>
           </p>
@@ -42,7 +42,7 @@ const Wildi = ({ setPage }) => {
             <span className='blue'>
               istotnie mniejszą grubość błony maziowej
             </span>{' '}
-            niz w grupie Placebo + NLPZ i mniejszy odsetek pacjentów z obrzękiem
+            niż w grupie Placebo + NLPZ i mniejszy odsetek pacjentów z obrzękiem
             stawu.
           </p>
         </div>
@@ -135,7 +135,7 @@ const Wildi = ({ setPage }) => {
                     </div>
                   </div>
                 )}
-                <p>Zmiana objętości chrząstki vs. wartości wyjściowe</p>
+                <p>Redukcja uszkodzeń szpiku kostnego vs. Wartości wyjściowe</p>
 
                 <div className='container_coordinates seven'>
                   <p className='number'>0,6</p>
@@ -205,7 +205,7 @@ const Wildi = ({ setPage }) => {
               U pacjentów w grupie CS, w porównaniu z pacjentami w grupie
               placebo, wystapiła istotna redukcja utraty objętości chrząstki w
               całym stawie kolanowym po 6 miesiącach, która utrzymywała się
-              takze po 12 miesiącach terapii.
+              także po 12 miesiącach terapii.
             </div>
             {/* ODSLONA 2 */}
             <div className={!action ? 'container red' : 'container red action'}>

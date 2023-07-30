@@ -57,7 +57,7 @@ const Uebelhart = ({ setPage }) => {
               <div className='opis_paska_uebelhart'>
                 <h3>-0,29 mm</h3>
                 <h3>-0,006 mm</h3>
-                <p>szpara stawowa uległa dalszemu zwęzeniu</p>
+                <p>szpara stawowa uległa dalszemu zwężeniu</p>
                 <p>proces chorobowy wstrzymany</p>
               </div>
               <div className='headline'>
@@ -111,17 +111,24 @@ const Uebelhart = ({ setPage }) => {
                   width: '50%',
                 }}
                 className='container column'>
-                <div style={{ padding: '1vw' }} className='subheadline second'>
+                {/* <div style={{ padding: '1vw' }} className='subheadline second'>
                   <h3 style={{ fontSize: '1.5vw' }}>Siarczan chondroityny</h3>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   style={{ marginBottom: 0, padding: '2vw 3vw', height: '20%' }}
                   className='subheadline red'>
                   <p style={{ fontSize: '1.2vw' }}>
                     w porównaniu do glukozaminy wykazuje większy efekt kliniczny
                     w skali Cohen'a w zakresie redukowania dolegliwości bólowych
                   </p>
-                </div>
+                </div> */}
+               <h3 className="pod_tabelka">
+               WPŁYW SIARCZANU CHONDROITYNY <br /> NA PŁYN STAWOWY:
+               </h3>
+               <ul>
+                <li>zwiększa lepkość płynu stawowego poprzez  hamowanie <br /> działania hialuronidazy</li>
+                <li>pobudza syntezę kwasu hialuronowego</li>
+               </ul>
               </div>
             </div>
           </div>

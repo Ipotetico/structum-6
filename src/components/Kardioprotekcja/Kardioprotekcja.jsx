@@ -8,8 +8,9 @@ const Kardioprotekcja = ({ setPage }) => {
 
   return (
     <>
-    <img src={process.env.PUBLIC_URL + `/images/serce.png`} alt="" className="serce" />
+
       <div className='main_container gradient four'>
+      <img src={process.env.PUBLIC_URL + `/images/serce.png`} alt="" className="serce" />
         <div className='container mechanizm'>
           <h1 className='headline' style={{fontSize:'40px'}}>
           Kardioprotekcyjne działanie CS u pacjentów <br /> z chorobami
@@ -26,7 +27,7 @@ układu sercowo-naczyniowego.
             alignSelf: 'center',
           }}></div>
           
-        <div className='container white'>
+        <div className='container white five'>
           <h2>
           Stosowanie CS jest związane z około 40% redukcją ryzyka zawału mięśnia sercowego, co sugeruje kardioprotekcyjne <br /> działanie siarczanu chondroityny.
           </h2>

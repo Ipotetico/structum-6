@@ -59,7 +59,7 @@ const Gabay = ({ setPage }) => {
                 {/* PIERWSZY WIERSZ */}
                 <div className='container green'>Wybrane parametry</div>
                 <div className='container green outline'>
-                  <p>Zmniejsza natezenia bólu w skali VAS</p>
+                  <p>Zmniejsza natężenie bólu w skali VAS</p>
                 </div>
                 <div className='container green outline'>
                   <p>Poprawia sprawność ręki w skali FIHOA</p>

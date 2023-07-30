@@ -198,7 +198,24 @@
             color: $red;
         }
     }
+}
 
+.pod_tabelka {
+    color: white;
+    font-size: calc(13px + .7vw);
+    text-align: center;
+    font-weight: 800;
+    margin-top: 1vw;
+}
 
+ul {
+    padding: 1vw 0 0 0vw;
+    li {
+        list-style: disc;
+        color: white;
 
+        &:nth-of-type(1) {
+margin-bottom: 1vw;
+        }
+    }
 }

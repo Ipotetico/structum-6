@@ -1,5 +1,237 @@
 @import '../../colors';
 
+.main_container_mcalindon {
+    width: 100vw;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 70% 1fr;
+    background: rgb(22, 43, 184);
+    background: radial-gradient(circle, rgba(22, 43, 184, 1) 0%, rgba(1, 0, 66, 1) 100%);
+
+    .middle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        .kontener {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 90% 1fr;
+
+
+            .pudelko {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .arrow {
+                    position: absolute;
+                    height: 80px;
+                    transform-origin: center;
+                    top: -40px;
+                }
+
+                .number {
+                    position: absolute;
+                    width: 120%;
+                    top: -170px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    &.two {
+                        top: -130px;
+                    }
+                }
+
+                .red {
+                    position: absolute;
+                    width: 20%;
+                    height: 70%;
+                    bottom: 16%;
+                    left: 25%;
+
+                    .slupek {
+                        position: absolute;
+                        background-color: rgba($blekit, 1);
+                        height: 0%;
+                        width: 100%;
+                        bottom: 0;
+                        animation: red 2s ease-out forwards;
+                        @keyframes red {
+                            0% {
+                                height: 0%;    
+                            }
+
+                            100% {
+                                height: 70%;
+                            }
+                            
+                        }
+                        
+                    }
+                }
+
+                .blue {
+                    position: absolute;
+                    width: 20%;
+                    height: 70%;
+                    bottom: 16%;
+                    left: 60%;
+
+              
+
+                    .slupek {
+                        position: absolute;
+                        background-color: rgba($red, 1);
+                        height: 0%;
+                        width: 100%;
+                        bottom: 0;
+                        animation: blue 2s ease-out forwards;
+                        @keyframes blue {
+                            0% {
+                                height: 0%;    
+                            }
+
+                            100% {
+                                height: 45%;
+                            }
+                            
+                        }
+
+                
+                    }
+                }
+        }
+        }
+    }
+    
+
+    img {
+        width: 100%;
+        height: 90%;
+        z-index: 1;
+    };
+
+    .dol {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+        justify-self: center;
+
+        .nota {
+            padding: 0 3vw;
+            text-align: left;
+            align-self: center;
+            justify-self: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 200;
+
+            sup {
+                margin-left: -.6vw;
+                font-size: 7px;
+            }
+        }
+    }
+
+
+    h2 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 3vw;
+        text-align: center;
+        align-self: center;
+
+        span {
+            font-size: 4vw;
+            color: $red;
+        }
+
+        sup {
+            vertical-align: super;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+    }
+
+    .menu {
+
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .nota {
+            padding: 0 3vw;
+            text-align: left;
+            align-self: center;
+            justify-self: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 200;
+
+            sup {
+                margin-left: -.6vw;
+                font-size: 7px;
+            }
+        }
+
+        &.three {
+            grid-template-columns: 1fr 1fr 10%;
+
+            .indicator {
+                width: 6vw;
+                height: 6vw;
+                background-color: rgba($blekit, 0.3);
+                border: 1px solid white;
+                border-radius: 50%;
+                align-self: center;
+                justify-self: center;
+                transform: rotate(0deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s;
+
+                &.turned {
+                    transform: rotate(-180deg);
+                }
+
+                i {
+                    text-align: center;
+                    color: white;
+                    font-size: 2.5vw;
+                    animation: arrow 2s ease-in-out;
+
+                    @keyframes arrow {
+                        0% {
+                            transform: scale(1);
+                        }
+
+                        50% {
+                            transform: scale(1.5);
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
 .gradient {
     background: rgb(22, 43, 184);
     background: radial-gradient(circle, rgba(22, 43, 184, 1) 0%, rgba(1, 0, 66, 1) 100%);
@@ -143,11 +375,12 @@
             box-sizing: border-box;
             padding: 3vw;
 
-            &.legend {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 90% 1fr;
-            }
+        }
+
+        &.legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
         }
 
         &.white {
@@ -240,14 +473,16 @@
     }
 }
 
-.frame {
-    width: 100%;
-    height: 100%;
-    border: 1px solid white;
-    border-radius: 15px;
+// .frame {
+//     width: 100%;
+//     height: 100%;
+//     border: 1px solid white;
+//     border-radius: 15px;
+// display: grid;
+// grid-template-columns: 1fr;
+// grid-template-rows: 90% 1fr;
 
-
-}
+// }
 
 .wykres {
     position: relative;
