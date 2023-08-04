@@ -19,15 +19,7 @@ const Uebelhart = ({ setPage }) => {
   return (
     <>
       <div className='main_container gradient five'>
-        {/* <div className='container'>
-          <h1>Badanie Uebelhart</h1>
-        </div>
-        <div
-          style={{
-            backgroundColor: 'white',
-            width: '80%',
-            justifySelf: 'center',
-          }}></div> */}
+   
         <div className='container'>
           <h2>
             <span>Siarczan chondroityny</span>
@@ -111,17 +103,6 @@ const Uebelhart = ({ setPage }) => {
                   width: '50%',
                 }}
                 className='container column'>
-                {/* <div style={{ padding: '1vw' }} className='subheadline second'>
-                  <h3 style={{ fontSize: '1.5vw' }}>Siarczan chondroityny</h3>
-                </div> */}
-                {/* <div
-                  style={{ marginBottom: 0, padding: '2vw 3vw', height: '20%' }}
-                  className='subheadline red'>
-                  <p style={{ fontSize: '1.2vw' }}>
-                    w porównaniu do glukozaminy wykazuje większy efekt kliniczny
-                    w skali Cohen'a w zakresie redukowania dolegliwości bólowych
-                  </p>
-                </div> */}
                <h3 className="pod_tabelka">
                WPŁYW SIARCZANU CHONDROITYNY <br /> NA PŁYN STAWOWY:
                </h3>

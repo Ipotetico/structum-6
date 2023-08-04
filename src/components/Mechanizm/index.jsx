@@ -62,17 +62,18 @@ const Mechanizm = ({ setPage }) => {
               </ul>
             </div>
           </div>
-          <h3 style={{ alignSelf: 'flex-end' }}>
+          <h3 >
             wpływ <span>siarczanu chondroityny</span> na płyn stawowy:
           </h3>
           <div className='container_mech two'>
             <div className='container'>
-              <p style={{ fontSize: '1.8vw', marginBottom: '1vw' }}>
-                Zwiększa lepkość płynu stawowego poprzez hamowanie działania
-                hialuronidazy
-              </p>
+            <ul className='blue' style={{marginTop:'0vw'}}>
+                <li>zwiększa lepkość płynu stawowego poprzez hamowanie działania hialuronidazy</li>
+                <li style={{marginBottom:0}}>
+                pobudza syntezę kwasu hialuronowego
+                </li>
+              </ul>
             </div>
-            <h3 className='blekit'>pobudza syntezę kwasu hialuronowego</h3>
           </div>
         </div>
         <div className='container menu'>

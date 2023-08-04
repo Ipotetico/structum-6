@@ -9,8 +9,7 @@ const Mazzucchelli = ({ setPage }) => {
       <div className='main_container gradient kahan'>
         <div className='container'>
           <h2>
-          Siarczan chondroiotyny pochodzenia ptasiego i wołowego – równie skuteczne
-w łagodzeniu bólu u pacjentów z ChZ stawu kolanowego.
+         <span className="span"> Siarczan CHONDROITYNY pochodzenia ptasiego <br /> i wołowego – równie skuteczne</span> w łagodzeniu bólu <br /> u pacjentów z ChZ stawu kolanowego.
           </h2>
         </div>
         <div className='container grid sixty'>

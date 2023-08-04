@@ -13,8 +13,7 @@ const Kardioprotekcja = ({ setPage }) => {
       <img src={process.env.PUBLIC_URL + `/images/serce.png`} alt="" className="serce" />
         <div className='container mechanizm'>
           <h1 className='headline' style={{fontSize:'40px'}}>
-          Kardioprotekcyjne działanie CS u pacjentów <br /> z chorobami
-układu sercowo-naczyniowego.
+       <span className="" style={{fontSize:'40px'}}>Kardioprotekcyjne działanie CS </span>u pacjentów <br /> z chorobami układu sercowo-naczyniowego.
           </h1>
         </div>
         
@@ -27,37 +26,31 @@ układu sercowo-naczyniowego.
             alignSelf: 'center',
           }}></div>
           
-        <div className='container white five'>
+        <div className='container white_kardio five'>
           <h2>
-          Stosowanie CS jest związane z około 40% redukcją ryzyka zawału mięśnia sercowego, co sugeruje kardioprotekcyjne <br /> działanie siarczanu chondroityny.
+       <span style={{fontSize:'30px', fontWeight:600}}>Stosowanie CS jest związane z około 40% redukcją ryzyka zawału mięśnia sercowego,</span> co sugeruje kardioprotekcyjne <br /> działanie siarczanu chondroityny.
           </h2>
           
         </div>
         <div className="container_one_row">
-        <div className="container_two_rows">
+
           <div className="text_box">
-            <p>Kardioprotekcyjne działanie 
-              CS dotyczy zarówno kobiet 
+            <p><span> Kardioprotekcyjne działanie 
+              CS</span>  dotyczy zarówno kobiet 
               jak i mężczyzn, bez względu
               na wiek oraz czas terapii 
               (poniżej lub powyżej 1 roku).</p>
           </div>
           <div className="text_box">
-            <p>Efekt kardioprotekcyjny 
+            <p>  <span> Efekt kardioprotekcyjny </span>
               obserwuje się u pacjentów 
               leczonych jak i nieleczonych
               lekami z grupy NLPZ.</p>
           </div>
-          
-        </div>
-        <div className="container_two_rows one">
-        <div className="text_box one">
-            <p>Efekt kardioprotekcyjny 
-              obserwuje się u pacjentów 
-              leczonych jak i nieleczonych
-              lekami z grupy NLPZ.</p>
+        <div className="text_box">
+            <p>Stosowanie glukozaminy ani nie zmniejsza ani nie zwiększa ryzyka  zawału serca.</p>
           </div>
-        </div>
+      
         </div>
 
         <div className='container menu'>

@@ -18,8 +18,8 @@ const TitlePage = ({ setPage }) => {
           <Button title='MECHANIZM DZIAŁANIA' setPage={setPage} page={8} />
           <Button title='REKOMENDACJE' setPage={setPage} page={9} />
           <Button title='LEK, A SUPLEMENT' setPage={setPage} page={10} />
-          <Button title='KARDIOPROTEKCJA' setPage={setPage} page={13}/>
-          <Button title='BADANIE MAZZUCCHELLI'setPage={setPage} page={14}/>
+          <Button title='BADANIE MAZZUCCHELLI' setPage={setPage} page={13}/>
+          <Button title='BADANIE Fardellone'setPage={setPage} page={14}/>
           <img
             src={process.env.PUBLIC_URL + '/images/logo_PF_white.svg'}
             alt=''

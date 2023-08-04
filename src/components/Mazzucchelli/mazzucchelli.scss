@@ -199,11 +199,7 @@
                 font-size: 3vw;
                 text-align: center;
 
-                span {
-                    font-size: 4vw;
-                    color: $red;
-                }
-
+            
                 sup {
                     vertical-align: super;
                     font-size: 14px;
@@ -1003,4 +999,9 @@
         border: none;
         padding: 0;
     }
+}
+
+.span {
+    font-size: 3vw !important;
+    color: $red;
 }

@@ -203,7 +203,7 @@ const Wildi = ({ setPage }) => {
             {/* ODSLONA 1 */}
             <div className={action ? 'container red' : 'container red action'}>
               U pacjentów w grupie CS, w porównaniu z pacjentami w grupie
-              placebo, wystapiła istotna redukcja utraty objętości chrząstki w
+              placebo, wystąpiła istotna redukcja utraty objętości chrząstki w
               całym stawie kolanowym po 6 miesiącach, która utrzymywała się
               także po 12 miesiącach terapii.
             </div>
