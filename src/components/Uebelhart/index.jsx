@@ -93,7 +93,9 @@ const Uebelhart = ({ setPage }) => {
                 <p>0</p>
               </div>
             </div>
+            
             <div className='container column'>
+              
               <div
                 style={{
                   position: 'absolute',
@@ -102,15 +104,18 @@ const Uebelhart = ({ setPage }) => {
                   height: '20%',
                   width: '50%',
                 }}
+
+                
                 className='container column'>
+     
                <h3 className="pod_tabelka">
-               WPŁYW SIARCZANU CHONDROITYNY <br /> NA PŁYN STAWOWY:
+            Siarczan chondroityny
                </h3>
-               <ul>
-                <li>zwiększa lepkość płynu stawowego poprzez  hamowanie <br /> działania hialuronidazy</li>
-                <li>pobudza syntezę kwasu hialuronowego</li>
-               </ul>
+        {/* <p className="pod_tabelka">
+            w porównaniu do glukozaminy wykazuje większy efekt kliniczny w skali Cohen'a w zakresie redukowania dolegliwości bólowych
+           </p> */}
               </div>
+              
             </div>
           </div>
 

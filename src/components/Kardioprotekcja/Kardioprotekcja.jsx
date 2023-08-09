@@ -36,14 +36,14 @@ const Kardioprotekcja = ({ setPage }) => {
 
           <div className="text_box">
             <p><span> Kardioprotekcyjne działanie 
-              CS</span>  dotyczy zarówno kobiet 
-              jak i mężczyzn, bez względu
+              CS</span> dotyczy zarówno kobiet 
+              jak <br /> i mężczyzn, bez względu
               na wiek oraz czas terapii 
-              (poniżej lub powyżej 1 roku).</p>
+              (poniżej lub powyżej <br /> 1 roku).</p>
           </div>
           <div className="text_box">
-            <p>  <span> Efekt kardioprotekcyjny </span>
-              obserwuje się u pacjentów 
+            <p>  <span>Efekt kardioprotekcyjny </span>
+              obserwuje się <br /> u pacjentów 
               leczonych jak i nieleczonych
               lekami z grupy NLPZ.</p>
           </div>

@@ -12,7 +12,7 @@ const Mazzucchelli = ({ setPage }) => {
          <span className="span"> Siarczan CHONDROITYNY pochodzenia ptasiego <br /> i wołowego – równie skuteczne</span> w łagodzeniu bólu <br /> u pacjentów z ChZ stawu kolanowego.
           </h2>
         </div>
-        <div className='container grid sixty'>
+        <div className='container grid sixty' style={{   marginTop:"1vw"}}>
           <div
             style={{
               position: 'relative',
@@ -20,7 +20,6 @@ const Mazzucchelli = ({ setPage }) => {
               padding: '2vw',
             }}
             className='container padding'>
-            {/* ODSLONA 1 */}
         
                 <img className='wykres_kahan' src={process.env.PUBLIC_URL + '/images/wykres_Mazzucchelli_1.svg'} alt="" />
        
